@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<title>My APPLICATION</title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<link rel="stylesheet" href="project.css" type="text/css" />
+	<link rel="stylesheet" href="/bootstraps/CSS/bootstrap.min.css">
+	<link rel="stylesheet" href="/fontawsome/all.min.css">
+	<script type="text/javascript" src="/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/project.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-expand-lg bg-light text-success">
+		<div class="container-fluid">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://www.getbootstrap.com">Bootstrap</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://www.fontawesome.com">Fontawesome</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://www.jquery.com">JQuery</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://www.sololearn.com">Sololearn</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://www.w3schools.com/">W3School</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://www.facebook.com">Facebook</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="http://www.google.com">Google</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#game_area" onclick=initGame()>PlayGame</a>
+				</li>
+			</ul>
+			<form class="d-flex" role="search">
+				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-info" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+	<div id="p">
+		<h2>Welcome To The Coding World!</h2>
+		<img id ="img" src="/image/console-log-server-demo.gif"><br>
+		Just hit "PlayGame" tab on the navigation bar above! <br> So that you can play the Game and you can also inspect how I wrote my JQuery Game. <br> Thanks you!</h6>
+	</div>
+	
+	<div class="container mt-3">
+		<p id="game_area_text">
+			<span id="player_name"></span>Click on the cell you want to move! (<span id="player_mark"></span>)
+		</p>
+		<div class="d-inline-flex p-3 bg-secondary text-white">  
+		  <div class="p-2 bg-info">Welcome To My Game!</div>
+		  <div class="p-2 bg-secondary" id="game_map"></div>
+		  <div class="p-2 bg-light">
+			<table id="result_table">
+				<tr>
+					<th></th>
+					<th>Player 1</th>
+					<th></th>
+					<th>Player 2</th>
+				</tr>
+				<tr>
+					<th>Score</th>
+					<td id="player1_wins">0</td>
+					<td></td>
+					<td id="player2_wins">0</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+		<p id="winner" class="end_game">
+			And the winner is: <span id="winner_name"></span>
+		</p>
+		<div id="ask_restart" class="end_game">
+			Would you like to play again? <button id="restart_game" onclick="initGame()">Yes</button>
+		</div>
+	</div>
+</body>
+</html>
