@@ -26,7 +26,7 @@ function initGame(){
 	$("#game_map").empty();
 	$(".container").show();
 	
-	for(var i=0; i<num_of_cols*num_of_rows;++i)
+	for(var i=0; i<num_of_cols*num_of_rows; ++i)
 	{
 		var cell = $("<div></div>")
 					.addClass("cell")
@@ -81,6 +81,8 @@ function playMove(ev){
 function initTurn(){
 	$("#player_name").text(players[current_player].name);
 	$("#player_mark").text(players[current_player].mark);
+	current_player.wins += 1;
+	return false;
 };
 
 function hoverCell(ev){
@@ -102,7 +104,7 @@ function checkAndProcessWin(){
 		/* Check the rows */
 		var cells = $("#game_map .cell");
 		var cells_inspected = {};
-		for (var row=1; row <= num_of_rows && !win; ++row ) 
+		for (var row=0; row <= num_of_rows && !win; ++row ) 
 		{
 			cells_inspected = cells
 								.filter(":lt("+num_of_cols*row+")")
