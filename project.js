@@ -25,6 +25,7 @@ function initGame(){
 	$("#p").hide();
 	$("#game_map").empty();
 	$(".container").show();
+	$(".end_game").hide();
 	
 	for(var i=0; i<num_of_cols*num_of_rows; ++i)
 	{
